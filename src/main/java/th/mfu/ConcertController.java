@@ -33,7 +33,7 @@ public class ConcertController {
     @GetMapping("/concerts")
     public String listConcerts(Model model) {
         // TODO: add concerts to model
-        model.addAttribute("model", concerts.values());
+        model.addAttribute("concerts", concerts.values());
         
         // TODO: return a template to list concerts
         return "list-concert";
@@ -55,7 +55,7 @@ public class ConcertController {
         // TODO: increment nextId
         nextId++;
         // TODO: redirect to list concerts
-        return "redirect:/list-concert";
+        return "redirect:/concerts";
     }
 
     @GetMapping("/delete-concert/{id}")
@@ -63,7 +63,7 @@ public class ConcertController {
         // TODO: remove concert from list of concerts
         concerts.remove(id);
         // TODO: redirect to list concerts
-        return "redirect:/list-concert";
+        return "redirect:/concerts";
     }
 
     

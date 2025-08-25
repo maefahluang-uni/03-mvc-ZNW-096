@@ -13,9 +13,9 @@
     <a href="/delete-all-concerts/">Delete All Concerts</a>
         
     <!-- TODO: Add list of concerts -->
-     <a href="/add-employee/">Add Employee</a>
+     <a href="/add-concert/">Add Employee</a>
     <ul>
-        <li th:each="concert : ${employees}">
+        <li th:each="concert : ${concerts}">
             <a  th:href="@{/delete-concert/{id}(id=${concert.id})}">Delete</a>
             <span th:text="${concert.title}"></span> 
             <span th:text="${concert.description}"></span>
